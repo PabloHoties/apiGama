@@ -1,3 +1,4 @@
+/*
 package snippet;
 
 public class Snippet {
@@ -10,4 +11,4 @@ public class Snippet {
 	  "path": "/api/empresas"
 	}
 }
-
+*/

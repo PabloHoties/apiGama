@@ -19,7 +19,7 @@ public class EmpresaRepository {
 	public List<Empresa> findAll() throws Exception {
 		Connection connection = ConnectionFactory.getConnection();
 		PreparedStatement statement = connection.prepareStatement(
-				"select e.EmpresaId, e.Entrada, e.DataHora, e.Valor, e.Historico, e.SaldoAnterior from Financeiro.FluxoBancario e");
+				"select top 10 EmpresaId, Entrada, DataHora, Valor, Historico, SaldoAnterior from Financeiro.FluxoBancario");
 		ResultSet resultSet = statement.executeQuery();
 		List<Empresa> lista = new ArrayList<Empresa>();
 		while (resultSet.next()) {
@@ -56,6 +56,7 @@ public class EmpresaRepository {
 		}
 	}
 	
+	/*
 	public static void main(String[] args) {
 		
 		EmpresaRepository empresaRepository = new EmpresaRepository();
@@ -68,5 +69,6 @@ public class EmpresaRepository {
 		}
 		
 	}
+	*/
 
 }
