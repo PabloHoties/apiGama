@@ -20,15 +20,15 @@ public class EmpresasController {
 
 		try {
 
-			EmpresaRepository clienteRepository = new EmpresaRepository();
-			List<Empresa> clientes = clienteRepository.findAll();
+			EmpresaRepository empresaRepository = new EmpresaRepository();
+			List<Empresa> empresas = empresaRepository.findAll();
 
-			if (clientes.size() == 0) // Se a lista está vazia
+			if (empresas.size() == 0) // Se a lista está vazia
 				// HTTP 204 - NO CONTENT
 				return ResponseEntity.status(204).body(null);
 
 			// HTTP 200 - OK
-			return ResponseEntity.status(200).body(clientes);
+			return ResponseEntity.status(200).body(empresas);
 		} catch (Exception e) {
 			// HTTP 500 - INTERNAL SERVER ERROR
 			return ResponseEntity.status(500).body(null);
