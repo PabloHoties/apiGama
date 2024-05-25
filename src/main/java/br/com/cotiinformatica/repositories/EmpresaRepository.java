@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -56,7 +57,7 @@ public class EmpresaRepository {
 		}
 	}
 	
-	/*
+	
 	public static void main(String[] args) {
 		
 		EmpresaRepository empresaRepository = new EmpresaRepository();
@@ -69,6 +70,6 @@ public class EmpresaRepository {
 		}
 		
 	}
-	*/
+	
 
 }
