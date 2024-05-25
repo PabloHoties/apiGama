@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.cotiinformatica.dtos.DesempenhoVendasResponseDto;
 import br.com.cotiinformatica.entities.Empresa;
 import br.com.cotiinformatica.repositories.EmpresaRepository;
 
@@ -14,8 +15,7 @@ import br.com.cotiinformatica.repositories.EmpresaRepository;
 @RequestMapping(value = "/api/empresas")
 public class EmpresasController {
 
-	
-	@GetMapping // Consultar
+	@GetMapping("consultar") // Consultar
 	public ResponseEntity<List<Empresa>> getAll() throws Exception {
 
 		try {
@@ -34,5 +34,12 @@ public class EmpresasController {
 			return ResponseEntity.status(500).body(null);
 		}
 	}
-	
+
+	@GetMapping("desempenho")
+	public DesempenhoVendasResponseDto consultarDesempenho() {
+
+		DesempenhoVendasResponseDto desempenho = new DesempenhoVendasResponseDto();
+		
+		return desempenho;
+	}
 }
