@@ -28,8 +28,12 @@ public class EmpresaRepository {
 
 			empresa.setId(UUID.fromString(resultSet.getString("EmpresaId")));
 			empresa.setEntrada(resultSet.getString("Entrada"));
-			empresa.setDataHora(resultSet.getString("DataHora"));
-			empresa.setValor(resultSet.getString("telefone"));
+			
+			//empresa.setDataHora(resultSet.getString("DataHora"));
+			
+			empresa.setValor(Double.parseDouble(resultSet.getString("Valor")));
+			empresa.setHistorico(resultSet.getString("Historico"));
+			empresa.setSaldoAnterior(Double.parseDouble(resultSet.getString("SaldoAnterior")));
 
 			lista.add(empresa);
 
