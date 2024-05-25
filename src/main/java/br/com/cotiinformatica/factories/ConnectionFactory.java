@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 public class ConnectionFactory {
 
 	private static String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";	
-	private static String url = "jdbc:sqlserver://localhost:1433;databaseName=hackathoncoti.database.windows.net";
+	private static String url = "jdbc:sqlserver://databaseName=hackathoncoti.database.windows.net";
 	private static String user = "giom";
 	private static String password = "hackathon@2024";
 
