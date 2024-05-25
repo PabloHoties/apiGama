@@ -55,5 +55,18 @@ public class EmpresaRepository {
 			return null;
 		}
 	}
+	
+	public static void main(String[] args) {
+		
+		EmpresaRepository empresaRepository = new EmpresaRepository();
+		try {
+			List<Empresa> empresas =  empresaRepository.findAll();
+			System.out.println(empresas);
+		}
+		catch(Exception e) {
+			
+		}
+		
+	}
 
 }
