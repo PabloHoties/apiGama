@@ -14,4 +14,4 @@ public class EmpresasResponseDto {
 	private Double valor;
 	private String historico;
 	private Double saldoAnterior;
-	}
+}
