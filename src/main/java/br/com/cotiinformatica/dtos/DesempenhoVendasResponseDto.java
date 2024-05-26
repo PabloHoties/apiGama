@@ -5,5 +5,15 @@ import lombok.Data;
 @Data
 public class DesempenhoVendasResponseDto {
 
-	private String desempenho = "Os dados indicam uma dinâmica financeira onde grandes entradas esporádicas ajudam a equilibrar as várias saídas, muitas das quais são frequentes e variam em tamanho. A gestão do saldo parece ser crítica, com entradas significativas ocasionalmente revertendo os efeitos das saídas. As transações mostram uma tendência de manutenção de um saldo positivo, embora com variações significativas em determinados períodos. A gestão financeira envolvida parece focada em garantir que grandes entradas compensem as frequentes retiradas, mantendo a saúde financeira ao longo do tempo.";
+	String desempenho = "Conclusão<br>"
+	        + "A empresa demonstra uma capacidade robusta de gerar receitas, mas enfrenta desafios significativos na gestão de seus gastos e na manutenção de um fluxo de caixa positivo. Para melhorar sua gestão financeira, a empresa deve focar em:<br><br>"
+	        + "Redução de Gastos:<br>"
+	        + "Revisar e possivelmente reduzir os gastos elevados para melhorar a liquidez.<br>"
+	        + "Melhoria no Controle Financeiro:<br>"
+	        + "Implementar sistemas e processos mais rigorosos para assegurar que as transações sejam registradas corretamente e refletidas com precisão nos saldos.<br>"
+	        + "Gestão de Fluxo de Caixa:<br>"
+	        + "Adotar estratégias de gestão de fluxo de caixa para evitar saldos negativos e melhorar a saúde financeira geral da empresa.<br><br>"
+	        + "Em resumo, enquanto a empresa possui uma forte capacidade de geração de receita, a melhoria na gestão de gastos e no controle do fluxo de caixa será crucial para garantir uma gestão financeira mais eficaz e sustentável.";
+
+
 }

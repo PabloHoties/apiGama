@@ -20,7 +20,18 @@ public class EmpresaRepository {
 		
 		Connection connection = ConnectionFactory.getConnection();
 		PreparedStatement statement = connection.prepareStatement(
-				"select top 100 EmpresaId, Entrada, DataHora, Valor, Historico, SaldoAnterior from Financeiro.FluxoBancario");
+			    "WITH RankedEntries AS ( " +
+			    "    SELECT EmpresaId, Entrada, DataHora, Valor, Historico, SaldoAnterior, " +
+			    "           ROW_NUMBER() OVER (PARTITION BY CAST(DataHora AS DATE) ORDER BY DataHora DESC) AS RowNum " +
+			    "    FROM Financeiro.FluxoBancario " +
+			    ") " +
+			    "SELECT EmpresaId, Entrada, DataHora, Valor, Historico, SaldoAnterior " +
+			    "FROM RankedEntries " +
+			    "WHERE RowNum = 1 " +
+			    "ORDER BY DataHora DESC " +
+			    "OFFSET 0 ROWS " +
+			    "FETCH NEXT 1000 ROWS ONLY"
+			);
 		
 		ResultSet resultSet = statement.executeQuery();
 		
